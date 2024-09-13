@@ -4,9 +4,9 @@ import FormKitHoneypot from './components/FormKitHoneypot.vue'
 
 const honeypot = ref()
 
-function formHandler(form) {
+function formHandler(form: Record<string, any>) {
   if (!honeypot.value?.isSpam()) {
-    console.log('submitting')
+    console.log('submitting', form)
   } else {
     console.log('spam detected')
   }

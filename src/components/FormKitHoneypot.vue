@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
+import { FormKit } from '@formkit/vue'
 const props = withDefaults(
   defineProps<{
     name?: string
@@ -42,6 +43,6 @@ onMounted(() => {
 </script>
 <template>
   <div class="xyz-dsajasohwpejr0234hjsr-0afd" ref="honeypot">
-    <FormKit :type="input" :name="name" />
+    <FormKit :type="input as unknown as 'text'" :name="name" />
   </div>
 </template>
