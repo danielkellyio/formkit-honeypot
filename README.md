@@ -5,7 +5,7 @@ Prevent spam in your Vue.js + FormKit applications.
 [Learn how honeypot fields work](https://dev.to/felipperegazio/how-to-create-a-simple-honeypot-to-protect-your-web-forms-from-spammers--25n8)
 
 ```
-npm i formkit-honeypot
+npm i formkit-honeypot vue @formkit/vue
 ```
 
 ```html
@@ -13,7 +13,7 @@ npm i formkit-honeypot
   import { ref } from 'vue'
   import FormKitHoneypot from 'formkit-honeypot'
 
-  const honeypot = ref()(before)
+  const honeypot = ref<InstanceType<typeof FormKitHoneypot>>()(before)
   // const honeypot = useTemplateRef() (Vue 3.5 +)
 
   function formHandler(form) {

@@ -11,36 +11,32 @@ const props = withDefaults(
 )
 
 const honeypot = ref<HTMLDivElement | undefined>()
-const input = computed(() => ({
-  type: 'honeypot',
-  schema: [
-    {
-      $el: 'input',
-      attrs: {
-        type: 'text',
-        name: props.name
-      }
-    }
-  ]
-}))
+const input = computed(
+  () =>
+    ({
+      type: 'honeypot',
+      schema: [
+        {
+          $el: 'input',
+          attrs: {
+            type: 'text',
+            name: props.name
+          }
+        }
+      ]
+    }) as unknown as 'text'
+)
 
 defineExpose({
   isSpam() {
     return !!honeypot.value?.querySelector('input')?.value
   }
 })
+
+const style = `opacity: 0 !important; z-index: -1 !important; position: fixed !important; top: -1000px !important; left: -1000px !important;`
 </script>
 <template>
-  <div
-    :style="{
-      opacity: '0 !important',
-      'z-index': '-1 !important',
-      position: 'fixed !important',
-      top: '-1000px !important',
-      left: '-1000px !important'
-    }"
-    ref="honeypot"
-  >
-    <FormKit :type="input as unknown as 'text'" :name="name" />
+  <div :style="style" ref="honeypot">
+    <FormKit :type="input" :name="name" />
   </div>
 </template>
