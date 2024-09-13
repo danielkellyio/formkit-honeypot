@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed } from 'vue'
 import { FormKit } from '@formkit/vue'
 const props = withDefaults(
   defineProps<{
@@ -29,20 +29,18 @@ defineExpose({
     return !!honeypot.value?.querySelector('input')?.value
   }
 })
-onMounted(() => {
-  document.head.appendChild(document.createElement('style')).textContent = `
-    .xyz-dsajasohwpejr0234hjsr-0afd {
-      opacity: 0 !important;
-      z-index: -1 !important;
-      position: fixed !important;
-      top: -1000px !important;
-      left: -1000px !important;
-    }
-  `
-})
 </script>
 <template>
-  <div class="xyz-dsajasohwpejr0234hjsr-0afd" ref="honeypot">
+  <div
+    :style="{
+      opacity: '0 !important',
+      'z-index': '-1 !important',
+      position: 'fixed !important',
+      top: '-1000px !important',
+      left: '-1000px !important'
+    }"
+    ref="honeypot"
+  >
     <FormKit :type="input as unknown as 'text'" :name="name" />
   </div>
 </template>
