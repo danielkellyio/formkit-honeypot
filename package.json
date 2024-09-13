@@ -1,0 +1,26 @@
+{
+  "name": "formkit-honeypot",
+  "version": "1.0.0",
+  "description": "A Vue component stopping spam. Use with FormKit",
+  "main": "index.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "formkit",
+    "spam",
+    "vue",
+    "spam",
+    "honeypot",
+    "formkit",
+    "honeypot",
+    "vue",
+    "honeypot"
+  ],
+  "peerDependencies": {
+    "@formkit/vue": "^1.6.6",
+    "vue": "^3.0.0"
+  },
+  "author": "",
+  "license": "MIT"
+}
