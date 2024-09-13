@@ -20,7 +20,8 @@ const input = computed(
           $el: 'input',
           attrs: {
             type: 'text',
-            name: props.name
+            name: props.name,
+             autocomplete: "off"
           }
         }
       ]
