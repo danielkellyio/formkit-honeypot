@@ -13,7 +13,7 @@ npm i formkit-honeypot vue @formkit/vue
   import { ref } from 'vue'
   import FormKitHoneypot from 'formkit-honeypot'
 
-  const honeypot = ref<InstanceType<typeof FormKitHoneypot>>()(before)
+  const honeypot = ref<InstanceType<typeof FormKitHoneypot>>()
   // const honeypot = useTemplateRef() (Vue 3.5 +)
 
   function formHandler(form) {
@@ -28,10 +28,7 @@ npm i formkit-honeypot vue @formkit/vue
 <template>
   <FormKit type="form" @submit="formHandler">
     <!-- Other legit fields here...-->
-    <FormKitHoneypot
-      name="some convincing field name that isn't on your form. Default is 'website'"
-      ref="honeypot"
-    />
+    <FormKitHoneypot name="website" ref="honeypot" />
   </FormKit>
 </template>
 ```
