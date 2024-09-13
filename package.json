@@ -1,7 +1,7 @@
 {
   "name": "formkit-honeypot",
   "version": "0.0.1",
-  "description": "A Vue component stopping spam. Use with FormKit",
+  "description": "A Vue component for stopping spam. Use with FormKit",
   "main": "index.vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
