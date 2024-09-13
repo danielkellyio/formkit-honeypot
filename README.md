@@ -2,6 +2,10 @@
 
 Prevent spam in your Vue.js + FormKit applications.
 
+```
+npm i formkit-honeypot
+```
+
 ```html
 <script setup lang="ts">
   import FormKitHoneypot from "formkit-honeypot";
