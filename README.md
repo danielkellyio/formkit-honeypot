@@ -19,8 +19,7 @@ Prevent spam in your Vue.js + FormKit applications.
 
 <template>
   <FormKit type="form" @submit="formHandler">
-    // Other legit fields here...
-
+    <!-- Other legit fields here...-->
     <FormKitHoneypot
       name="some convincing field name that isn't on your form. Default is 'website'"
       ref="honeypot"
