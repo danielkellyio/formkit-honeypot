@@ -21,7 +21,7 @@ const input = computed(
           attrs: {
             type: 'text',
             name: props.name,
-             autocomplete: "off"
+            autocomplete: 'off'
           }
         }
       ]
